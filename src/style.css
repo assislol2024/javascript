@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #267365;
+    height: 90dvh;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+main{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.236);
+}
+h1{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+input{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.236);
+}
+
+#btnAdicionar{
+    font-weight: bolder;
+    background-color: #F2CB05;
+    font-size: 1.5rem;
+    padding: 10px 40px;
+    border-radius: 1rem;
+    border: none;
+    display: block;
+    margin: 15px auto;
+}
+#btnReprovados,#btnAprovados{
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+#btnReprovados{
+    background-color: #F23030;
+}
+#btnAprovados{
+    background-color: #F23030;
+}
+.filtro{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
