@@ -15,15 +15,7 @@
             </div>
 
             <div>
-            <input type="text" id="sobrenome" placeholder="Sobrenome" required>
-            </div>
-
-            <div>
-            <input type="number" id="peso" placeholder="Peso" step="0.1" required>
-            </div>
-
-            <div>
-            <input type="number" id="altura" placeholder="Altura" step="0.01" required>
+            <input type="number" id="nota" placeholder="Nota" required>
             </div>
 
             <button type="submit" id="btnAdicionar">Adicionar</button>
@@ -33,12 +25,14 @@
             <button type="button" id="btnAprovados">Aprovados</button>
             <button type="button" id="btnReprovados">Reprovados</button>
         </section>
-        <section>
-            <ul class="lista">
-                
-            </ul>
+        <section class="mensagem"></section>
+        <section class="lista">
+            
         </section>
     </main>
-<script src="js/script.js"></script>
+    <section class="media">
+        <h1>Média da turma: <span id="mediaValue"></span></h1>
+    </section>
+<script src="js/dom.js"></script>
 </body>
 </html>
