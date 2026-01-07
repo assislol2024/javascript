@@ -60,8 +60,8 @@ localStorageVerificacao()
 const btnAdicionar = document.querySelector("#btnAdicionar");
 const btnAprovados = document.querySelector("#btnAprovados");
 const btnReprovados = document.querySelector("#btnReprovados");
-const btnExcluir = document.querySelectorAll(".btnExcluir")
-const mensagem = document.querySelector(".mensagem")
+const btnExcluir = [document.querySelector(".btnExcluir")];
+const mensagem = document.querySelector(".mensagem");
 const lista = document.querySelector(".lista");
 const media = document.querySelector("#mediaValue");
 
@@ -121,10 +121,10 @@ btnReprovados.addEventListener("click", (e) => {
                 <hr>
             `).join("<br>")
         : "Nenhum aluno reprovado";
-
+    console.log(btnExcluir)
 });
 
-btnExcluir.addEventListener("click", (e) =>{
-    alert("Foi")
-})
 // Excluir aluno da lista
+btnExcluir.addEventListener("click", () =>{
+    console.log("Foi")
+})
