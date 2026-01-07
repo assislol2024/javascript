@@ -93,7 +93,14 @@ btnAprovados.addEventListener("click", (e) => {
     const aprovados = objAlunos.aprovados();
 
     lista.innerHTML = aprovados.length
-        ? aprovados.map(a => `${a.nome} - ${a.nota}`).join("<br>")
+        ? aprovados.map(a => `
+                <section class="listaItem">
+                    <p class="itemNome">${a.nome}</p>
+                    <p class="itemNota">${a.nota}</p>
+                    <button class="btnExcluir">🗑</button>
+                </section>
+                <hr>
+            `).join("<br>")
         : "Nenhum aluno aprovado";
 });
 
@@ -102,7 +109,14 @@ btnReprovados.addEventListener("click", (e) => {
     const reprovados = objAlunos.reprovados();
 
     lista.innerHTML = reprovados.length
-        ? reprovados.map(a => `${a.nome} - ${a.nota}`).join("<br>")
+        ? reprovados.map(a => `
+                <section class="listaItem">
+                    <p class="itemNome">${a.nome}</p>
+                    <p class="itemNota">${a.nota}</p>
+                    <button class="btnExcluir">🗑</button>
+                </section>
+                <hr>
+            `).join("<br>")
         : "Nenhum aluno reprovado";
 
 });

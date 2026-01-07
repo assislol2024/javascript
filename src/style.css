@@ -113,6 +113,14 @@ hr {
     justify-content: space-between;
 }
 
+.listaItem{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.listaItem .btnExcluir{
+    width: 10%;
+}
 /* Média da turma */
 .media {
     margin-top: 20px;
