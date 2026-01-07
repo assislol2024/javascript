@@ -60,11 +60,12 @@ localStorageVerificacao()
 const btnAdicionar = document.querySelector("#btnAdicionar");
 const btnAprovados = document.querySelector("#btnAprovados");
 const btnReprovados = document.querySelector("#btnReprovados");
+const btnExcluir = document.querySelectorAll(".btnExcluir")
 const mensagem = document.querySelector(".mensagem")
 const lista = document.querySelector(".lista");
 const media = document.querySelector("#mediaValue");
 
-
+// ---Adicionar
 btnAdicionar.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -88,6 +89,7 @@ btnAdicionar.addEventListener("click", (e) => {
     
 });
 
+// Exibir lista de alunos aprovados
 btnAprovados.addEventListener("click", (e) => {
     e.preventDefault();
     const aprovados = objAlunos.aprovados();
@@ -104,6 +106,7 @@ btnAprovados.addEventListener("click", (e) => {
         : "Nenhum aluno aprovado";
 });
 
+// Exibir lista de alunos reprovados
 btnReprovados.addEventListener("click", (e) => {
     e.preventDefault();
     const reprovados = objAlunos.reprovados();
@@ -120,3 +123,8 @@ btnReprovados.addEventListener("click", (e) => {
         : "Nenhum aluno reprovado";
 
 });
+
+btnExcluir.addEventListener("click", (e) =>{
+    alert("Foi")
+})
+// Excluir aluno da lista
