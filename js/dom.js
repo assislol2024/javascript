@@ -60,7 +60,7 @@ localStorageVerificacao()
 const btnAdicionar = document.querySelector("#btnAdicionar");
 const btnAprovados = document.querySelector("#btnAprovados");
 const btnReprovados = document.querySelector("#btnReprovados");
-const btnExcluir = [document.querySelector(".btnExcluir")];
+const btnExcluir = [document.querySelectorAll(".btnExcluir")];
 const mensagem = document.querySelector(".mensagem");
 const lista = document.querySelector(".lista");
 const media = document.querySelector("#mediaValue");
@@ -124,7 +124,16 @@ btnReprovados.addEventListener("click", (e) => {
     console.log(btnExcluir)
 });
 
-// Excluir aluno da lista
-btnExcluir.addEventListener("click", () =>{
-    console.log("Foi")
-})
+// Excluir aluno da lista **estudando**
+lista.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btnExcluir")) {
+        const item = e.target.closest(".listaItem");
+        const nome = item.querySelector(".itemNome").textContent;
+
+        objAlunos.removerAluno(nome);
+        localStorage.setItem(0, JSON.stringify(objAlunos.alunos));
+
+        item.remove();
+        media.innerHTML = objAlunos.mediaGeral();
+    }
+});
