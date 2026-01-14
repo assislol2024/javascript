@@ -125,14 +125,13 @@ btnReprovados.addEventListener("click", (e) => {
 });
 
 // Excluir aluno da lista **estudando**
-lista.addEventListener("click", (e) => {
+addEventListener("click", (e) => {
     if (e.target.classList.contains("btnExcluir")) {
         const item = e.target.closest(".listaItem");
         const nome = item.querySelector(".itemNome").textContent;
 
         objAlunos.removerAluno(nome);
         localStorage.setItem(0, JSON.stringify(objAlunos.alunos));
-
         item.remove();
         media.innerHTML = objAlunos.mediaGeral();
     }
